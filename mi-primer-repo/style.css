@@ -1,0 +1,15 @@
+:root{--fondo:#e6ede3;--tinta:#1d2b26;--acento:#e8a317;--ciruela:#5b2a4e}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:2rem;background:var(--fondo);color:var(--tinta);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.6}
+main{max-width:34rem}
+h1{font-size:clamp(2.4rem,8vw,4rem);line-height:1.05;font-weight:800;margin:0 0 1rem}
+#nombre{color:var(--ciruela)}
+.intro{font-size:1.1rem;margin:0 0 2.5rem}
+.historial{list-style:none;margin:0 0 2rem;padding:0 0 0 1.75rem;border-left:3px solid var(--tinta)}
+.historial li{position:relative;margin-bottom:1.5rem}
+.historial li::before{content:"";position:absolute;left:calc(-1.75rem - 9px);top:.35rem;width:15px;height:15px;border-radius:50%;background:var(--acento);border:3px solid var(--tinta)}
+.historial strong{display:block;font-weight:600}
+.historial span{opacity:.8}
+.pie{font-size:.95rem;border-top:1px solid var(--tinta);padding-top:1rem}
+@media (prefers-reduced-motion:no-preference){.historial li:last-child::before{animation:pulso 1.8s ease-out 2}}
+@keyframes pulso{0%{box-shadow:0 0 0 0 var(--acento)}100%{box-shadow:0 0 0 14px transparent}}
